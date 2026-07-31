@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="100%" height="100%">
+  <defs>
+    <!-- Cyan to Electric Blue Gradient -->
+    <linearGradient id="autobusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F2FE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4FACFE;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glowing Accent Gradient -->
+    <!-- userSpaceOnUse: the cross-bar is a horizontal line, so its object bounding
+         box is zero-height and an objectBoundingBox gradient would not render at all.
+         Coordinates are in the translated group's user space. -->
+    <linearGradient id="nodeGrad" gradientUnits="userSpaceOnUse" x1="45" y1="90" x2="115" y2="90">
+      <stop offset="0%" style="stop-color:#0072FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00F2FE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- ICON: Original Autonomous Loop + Node Network -->
+  <g transform="translate(20, 20)">
+    <!-- Outer Autonomous Feedback Loop -->
+    <path d="M 80 20 L 130 120 C 135 130, 125 140, 110 140 L 50 140 C 35 140, 25 130, 30 120 Z" 
+          fill="none" stroke="url(#autobusGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Dynamic Cross-Bar -->
+    <path d="M 45 90 L 115 90" stroke="url(#nodeGrad)" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Autonomous System Network Nodes -->
+    <circle cx="80" cy="20" r="7" fill="#00F2FE"/>
+    <circle cx="45" cy="90" r="5" fill="#4FACFE"/>
+    <circle cx="115" cy="90" r="5" fill="#0072FF"/>
+    <circle cx="30" cy="120" r="6" fill="#00F2FE"/>
+    <circle cx="130" cy="120" r="6" fill="#0072FF"/>
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <g font-family="System-UI, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <!-- AUTOBUS -->
+    <text x="180" y="110" font-size="52" font-weight="900" letter-spacing="4" fill="#0F172A">
+      AUTOBUS
+    </text>
+    <!-- LAB -->
+    <text x="475" y="110" font-size="52" font-weight="300" letter-spacing="6" fill="#0072FF">
+      LAB
+    </text>
+    <!-- Subtitle / Tagline (SINGULAR) -->
+    <text x="185" y="142" font-size="14" font-weight="600" letter-spacing="7.5" fill="#64748B">
+      AUTONOMOUS BUSINESS SYSTEM
+    </text>
+  </g>
+</svg>
