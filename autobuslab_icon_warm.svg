@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <!-- Gold to Amber Gradient -->
+    <linearGradient id="autobusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC837;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8008;stop-opacity:1" />
+    </linearGradient>
+    <!-- userSpaceOnUse: the cross-bar is a horizontal line, so its object bounding
+         box is zero-height and an objectBoundingBox gradient would not render at all. -->
+    <linearGradient id="nodeGrad" gradientUnits="userSpaceOnUse" x1="47" y1="100" x2="113" y2="100">
+      <stop offset="0%" style="stop-color:#E8341C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC837;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Thicker-line warm "A" variant of the AUTOBUS icon: open-bottom legs + cross-bar, warm palette (gold, amber, red), same nodes -->
+  <g>
+    <!-- Two legs meeting at the apex (open base, like the letter A) -->
+    <path d="M 30 140 L 80 20 L 130 140"
+          fill="none" stroke="url(#autobusGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Cross-bar of the A -->
+    <path d="M 47 100 L 113 100" stroke="url(#nodeGrad)" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Autonomous System Network Nodes -->
+    <circle cx="80" cy="20" r="9" fill="#FFC837"/>
+    <circle cx="47" cy="100" r="7" fill="#FF8008"/>
+    <circle cx="113" cy="100" r="7" fill="#E8341C"/>
+    <circle cx="30" cy="140" r="8" fill="#FFC837"/>
+    <circle cx="130" cy="140" r="8" fill="#E8341C"/>
+  </g>
+</svg>
